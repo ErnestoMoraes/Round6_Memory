@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jogo_da_memoria/app/contrains.dart';
 import 'package:jogo_da_memoria/app/core/components/card_nivel.dart';
+import 'package:jogo_da_memoria/app/core/settings/game_setting.dart';
+import 'package:jogo_da_memoria/app/models/game_play_model.dart';
 
 class NivelPage extends StatelessWidget {
   final Modo modo;
@@ -9,6 +11,9 @@ class NivelPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final niveis = GameSetting.niveis
+        .map((e) => CardNivel(gamePlay: GamePlay(modo: modo, nivel: e)))
+        .toList();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Nível do Jogo'),
@@ -20,11 +25,7 @@ class NivelPage extends StatelessWidget {
           mainAxisSpacing: 20,
           crossAxisSpacing: 20,
           padding: const EdgeInsets.all(24),
-          children: [
-            CardNivel(modo: modo, nivel: 6),
-            CardNivel(modo: modo, nivel: 8),
-            CardNivel(modo: modo, nivel: 12),
-          ],
+          children: niveis,
         ),
       ),
     );
