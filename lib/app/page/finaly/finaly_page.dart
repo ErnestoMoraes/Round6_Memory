@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jogo_da_memoria/app/contrains.dart';
 import 'package:jogo_da_memoria/app/core/components/start_button.dart';
 
 class FinalyPage extends StatefulWidget {
@@ -11,9 +12,9 @@ class FinalyPage extends StatefulWidget {
 }
 
 class _FinalyPageState extends State<FinalyPage> {
-  String getResultado() {
-    return resultado == Resultado.vitoria ? 'Vencedor' : 'Eliminado';
-  }
+  // String getResultado() {
+  //   return resultado == Resultado.aprovado ? 'Vencedor' : 'Eliminado';
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -22,19 +23,19 @@ class _FinalyPageState extends State<FinalyPage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(
-            '${getResultado().toUpperCase()}!',
-            style: const TextStyle(fontSize: 30),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30),
-            child: Image.asset('images/${getResultado()}.png'),
-          ),
-          resultado == Resultado.Eliminado
-              ? StartButton(
-                  title: 'Tentar novamente', color: Colors.white, action: () {})
-              : StartButton(
-                  title: 'Jogar novamente', color: Colors.white, action: () {})
+          // Text(
+          //   '${getResultado().toUpperCase()}!',
+          //   style: const TextStyle(fontSize: 30),
+          // ),
+          // Padding(
+          //   padding: const EdgeInsets.symmetric(vertical: 30),
+          //   child: Image.asset('images/${getResultado()}.png'),
+          // ),
+          // resultado == Resultado.eliminado
+          //     ? StartButton(
+          //         title: 'Tentar novamente', color: Colors.white, action: () {})
+          //     : StartButton(
+          //         title: 'Jogar novamente', color: Colors.white, action: () {})
         ],
       ),
     );
