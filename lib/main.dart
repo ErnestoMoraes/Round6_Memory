@@ -4,7 +4,7 @@ import 'package:jogo_da_memoria/app/core/ui/styles/themeApp/theme_app.dart';
 import 'package:jogo_da_memoria/app/page/home/home_page.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
   runApp(MultiProvider(
     providers: [
       Provider<GameController>(
