@@ -1,9 +1,12 @@
+// ignore: depend_on_referenced_packages
+import 'package:mobx/mobx.dart';
+
 import 'package:jogo_da_memoria/app/contrains.dart';
 import 'package:jogo_da_memoria/app/core/settings/game_setting.dart';
 import 'package:jogo_da_memoria/app/models/game_opcao_model.dart';
 import 'package:jogo_da_memoria/app/models/game_play_model.dart';
 import 'package:jogo_da_memoria/app/repositories/records_repository.dart';
-import 'package:mobx/mobx.dart';
+
 part 'game_controller.g.dart';
 
 class GameController = GameControllerBase with _$GameController;
@@ -31,7 +34,14 @@ abstract class GameControllerBase with Store {
   @computed
   bool get jogadaCompleta => _escolha.length == 2;
 
-  GameControllerBase({required this.recordesRepository});
+  GameControllerBase({required this.recordesRepository}) {
+    reaction((_) => venceu == true, (bool ganhou) {
+      if (ganhou) {
+        recordesRepository.updateRecordes(
+            gameplay: _gamePlay, score: gameScore);
+      }
+    });
+  }
 
   startGame({required GamePlay gamePlay}) {
     _gamePlay = gamePlay;
@@ -133,4 +143,5 @@ abstract class GameControllerBase with Store {
     _gamePlay.nivel = GameSetting.niveis[nivelIndex];
     startGame(gamePlay: _gamePlay);
   }
+
 }
