@@ -18,11 +18,6 @@ O jogo possui dois níveis de jogo:
  <img src="https://github.com/ErnestoMoraes/Round6_Memory/blob/main/images/readme/aprovado.png" alt="Alt Text" height=400>
 </div>
 
-## ⚙️ Para logar:
-  Não será possivel cadastrar um noco usuário! <br>
-  Portanto, utilize esses dados para acessar: <br>
-  Email: usuario_teste@gmail.com <br>
-  Senha: usuario_teste <br>
 
 <div align="center">
   <br/>
