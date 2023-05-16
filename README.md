@@ -2,8 +2,10 @@
 
 Este é um projeto de um jogo inspirado na série norte-coreana "Round 6". O jogo possui uma mecânica intuitiva, onde os usuários podem rotacionar cartas através de animações de Flip Card. Além disso, ele utiliza bibliotecas de gerenciamento de estado como Provider e MobX, e também faz uso de um banco de dados para armazenar os recordes de jogadas em cada nível.
 
-## Telas/Template
- <div style="display: flex;">
+![capa](https://github.com/ErnestoMoraes/Round6_Memory/blob/main/images/readme/capa.png)
+
+<!-- ## Telas/Template -->
+<!--  <div style="display: flex;">
  <img src="https://github.com/ErnestoMoraes/Round6_Memory/blob/main/images/readme/home.png" alt="Alt Text" height=400>
  <img src="https://github.com/ErnestoMoraes/Round6_Memory/blob/main/images/readme/nivel_normal.png" alt="Alt Text" height=400>
  <img src="https://github.com/ErnestoMoraes/Round6_Memory/blob/main/images/readme/nivel_round6.png" alt="Alt Text" height=400>
@@ -14,7 +16,7 @@ Este é um projeto de um jogo inspirado na série norte-coreana "Round 6". O jog
  <img src="https://github.com/ErnestoMoraes/Round6_Memory/blob/main/images/readme/game_normal.png" alt="Alt Text" height=400>
  <img src="https://github.com/ErnestoMoraes/Round6_Memory/blob/main/images/readme/eliminado.png" alt="Alt Text" height=400>
  <img src="https://github.com/ErnestoMoraes/Round6_Memory/blob/main/images/readme/aprovado.png" alt="Alt Text" height=400>
-</div>
+</div> -->
 
 ## Funcionalidades
 
