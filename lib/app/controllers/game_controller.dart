@@ -2,6 +2,7 @@ import 'package:jogo_da_memoria/app/contrains.dart';
 import 'package:jogo_da_memoria/app/core/settings/game_setting.dart';
 import 'package:jogo_da_memoria/app/models/game_opcao_model.dart';
 import 'package:jogo_da_memoria/app/models/game_play_model.dart';
+import 'package:jogo_da_memoria/app/repositories/records_repository.dart';
 import 'package:mobx/mobx.dart';
 part 'game_controller.g.dart';
 
@@ -25,9 +26,12 @@ abstract class GameControllerBase with Store {
   List<Function> _escolhaCallback = [];
   int _acertos = 0;
   int _numPares = 0;
+  RecordsRepository recordesRepository;
 
   @computed
   bool get jogadaCompleta => _escolha.length == 2;
+
+  GameControllerBase({required this.recordesRepository});
 
   startGame({required GamePlay gamePlay}) {
     _gamePlay = gamePlay;

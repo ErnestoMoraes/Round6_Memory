@@ -4,12 +4,8 @@ import 'package:jogo_da_memoria/app/core/ui/styles/themeApp/theme_app.dart';
 
 class RecordesPage extends StatelessWidget {
   final Modo modo;
-  final List<String> recordes = ['Modo', 'Nível 8', 'Nível 10', 'Nível 12'];
 
-  RecordesPage({
-    Key? key,
-    required this.modo,
-  }) : super(key: key);
+  const RecordesPage({Key? key, required this.modo}) : super(key: key);
 
   getModo() {
     return modo == Modo.normal ? 'Normal' : 'Round 6';
