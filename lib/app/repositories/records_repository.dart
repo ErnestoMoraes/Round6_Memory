@@ -36,14 +36,10 @@ abstract class RecordsRepositoryBase with Store {
   updateRecordes({required GamePlay gameplay, required int score}) {
     final key = gameplay.modo.toString();
 
-    if (_gamePlay.modo == Modo.normal &&
-        (recordsNormal[gameplay.nivel] == null ||
-            score < recordsNormal[gameplay.nivel])) {
+    if (_gamePlay.modo == Modo.normal && (recordsNormal[gameplay.nivel] == null || score < recordsNormal[gameplay.nivel])) {
       recordsNormal[gameplay.nivel] = score;
       _recordsBox.put(key, recordsNormal);
-    } else if (_gamePlay.modo == Modo.round6 &&
-        (recordsRound6[gameplay.nivel] == null ||
-            score > recordsRound6[gameplay.nivel])) {
+    } else if (_gamePlay.modo == Modo.round6 && (recordsRound6[gameplay.nivel] == null || score > recordsRound6[gameplay.nivel])) {
       recordsRound6[gameplay.nivel] = score;
       _recordsBox.put(key, recordsRound6);
     }

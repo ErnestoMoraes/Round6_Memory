@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Round 6 - Jogo da Memória',
       theme: ThemeApp.theme,
+      debugShowCheckedModeBanner: false,
       home: const HomePage(),
     );
   }
